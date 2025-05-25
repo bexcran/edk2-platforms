@@ -106,20 +106,10 @@ pipeline {
                     export PYTHON_COMMAND=python3
                     export GCC_AARCH64_PREFIX=aarch64-linux-gnu-
                     ./edk2-platforms/Platform/Ampere/buildfw.sh -m ASRockRack -p Altra1L2T -t GCC -b RELEASE
+                    ./edk2-platforms/Platform/Ampere/buildfw.sh -m ASRockRack -p Altra1L2T -t GCC -b DEBUG
+                    ./edk2-platforms/Platform/Ampere/buildfw.sh -m ASRockRack -p Altra1L2T -t GCC -b NOOPT
                   '''
                 }
-            }
-        }
-        stage('Test') {
-            agent { label 'x86_64' }
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            agent { label 'x86_64' }
-            steps {
-                echo 'Deploying....'
             }
         }
     }
