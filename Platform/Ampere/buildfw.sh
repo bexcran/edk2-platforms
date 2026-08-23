@@ -51,8 +51,8 @@ usage () {
   echo "Options:"
   echo "  -b <bldtype>, --build <bldtype>  Specify the build type: DEBUG or RELEASE"
   echo "  -t <tc>, --toolchain <tc>        Specify the toolchain to use: GCC or CLANG"
-  echo "  -m <mfg>, --manufacturer <mfg>   Specify platform manufacturer (e.g. Ampere)"
-  echo "  -p <plat>, --platform <plat>     Specify platform to build (e.g. Jade)"
+  echo "  -m <mfg>, --manufacturer <mfg>   Specify platform manufacturer (e.g. ADLINK)"
+  echo "  -p <plat>, --platform <plat>     Specify platform to build (e.g. ComHpcAlt)"
   echo "  -l <kern>, --linuxboot <kern>    Build LinuxBoot firmware instead of full EDK2 with UEFI Shell, specifying path to flashkernel"
   echo "  -f, --flash                      Copy firmware to BMC and flash firmware (keeping EFI variables and NVPARAMs) after building"
   echo "  -F, --full-flash                 Copy firmware to BMC and flash full EEPROM (resetting EFI variables and NVPARAMs) after building"
@@ -68,7 +68,6 @@ usage () {
   echo ""
   echo "  Available platforms:"
   echo "    ADLINK     -> ComHpcAlt"
-  echo "    Ampere     -> Jade"
   echo "    ASRockRack -> Altra1L2Q"
   echo "    ASRockRack -> Altra1L2T"
   echo ""
@@ -114,8 +113,8 @@ pushd "${ROOT_DIR}"
 
 SPI_SIZE_MB=32
 
-MANUFACTURER=Ampere
-BOARD_NAME=Jade
+MANUFACTURER=ADLINK
+BOARD_NAME=ComHpcAlt
 
 FLASHFW=0
 RESET_NV_STORAGE=0
