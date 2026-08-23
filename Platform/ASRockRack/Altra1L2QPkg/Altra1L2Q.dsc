@@ -115,8 +115,9 @@
   #
   BoardPcieLib|Platform/ASRockRack/AltraBoardPkg/Library/BoardPcieLib/BoardPcieLib.inf
 
-  PlatformBmcReadyLib|Platform/Ampere/JadePkg/Library/PlatformBmcReadyLib/PlatformBmcReadyLib.inf
+  PlatformBmcReadyLib|Platform/ASRockRack/AltraBoardPkg/Library/PlatformBmcReadyLib/PlatformBmcReadyLib.inf
   LockBoxLib|MdeModulePkg/Library/LockBoxNullLib/LockBoxNullLib.inf
+  ArmSmcccSocIdLib|ArmPkg/Library/ArmSmcccSocIdLib/ArmSmcccSocIdLib.inf
 
   #
   # RTC Library: Common RTC
