@@ -324,16 +324,6 @@
   !endif
 
   #
-  # Renesas PD720202 XHCI firmware uploader
-  #
-!ifdef $(USB_UPD720202_ROM_FILE)
-  Drivers/OptionRomPkg/RenesasFirmwarePD720202/RenesasFirmwarePD720202.inf {
-    <LibraryClasses>
-      DxeServicesLib|MdePkg/Library/DxeServicesLib/DxeServicesLib.inf
-  }
-!endif
-
-  #
   # VGA Aspeed
   #
   Drivers/ASpeed/ASpeedGopBinPkg/ASpeedAst2500GopDxe.inf
